@@ -17,8 +17,9 @@
         <!-- Global header med navigasjon, logo og linker -->
         <!-- Oppgavetekst sider header skal bestå av to deler med brukerlinker i en del og logo + navigasjon i en annen, jeg får ikke til å sette opp layout til headeren med denne strukturen, og har derfor valgt å sette det opp som dette -->
         <header class="globalHead">
-            <a href="index.html" class="logo"><img src="Bilder/logo.png" alt="logo som viser et fly over en sol"></a> <!-- Logo med link til hovedsiden -->
-            <a href="order.html" class="søk"><i class="fa-solid fa-magnifying-glass" aria-label="søke-ikon"></i></a><!-- søkeikon med link til order.html -->
+            <h1 class="logo">
+                <a href="index.html"><img src="Bilder/logo.png" alt="logo som viser et fly over en sol"></a> <!-- Logo med link til hovedsiden -->
+            </h1>            <a href="order.html" class="søk"><i class="fa-solid fa-magnifying-glass" aria-label="søke-ikon"></i></a><!-- søkeikon med link til order.html -->
             <details class="bruker">
                 <summary><i class="fa-regular fa-circle-user" aria-label="bruker-ikon"></i></summary><!-- brukerikon som holder på linker til "opprett en konto" og "min side" -->
                 <a href="#">Opprett en konto</a>
@@ -38,7 +39,30 @@
             </details>
         </header>
 
-        <header></header>
+        <header id="hotellHeader">
+            <section class="galleri" aria-label="bildegalleri">
+                <img id="slide1" class="slide" src="Bilder/basseng2.jpg" alt="utsikt over et basseng med hvite solstoler rundt og blå himmel i bakgrunnen">
+                <img id="slide2" class="slide" src="Bilder/strand2.jpg" alt="oversiktsbilde som viser en isolert strand bland åssider og blått vann">
+                <img id="slide3" class="slide" src="Bilder/basseng1.jpg" alt="Kvinne som lener seg på en bassengkant med utsikt til bungalows på vannet">
+                <img id="slide4" class="slide" src="Bilder/strand3.jpg" alt="fem reisende i badetøy som løper fra stranden til havet">
+                <img id="slide5" class="slide" src="Bilder/strand1.jpg" alt="Bilde av blått vann som bølger inn mot en strand">
+                <img id="slide6" class="slide" src="Bilder/strand4.jpg" alt="brygge i tre som leder fra en hvit strand og grønne planter til runde cabanas omringet av blått vann">
+            </section>
+            <section>
+                <i id="forrige" class="fa-solid fa-angle-left" aria-label="forrige bilde"></i>
+                <i id="neste" class="fa-solid fa-angle-right" aria-label="neste bilde"></i>
+                <i id="bildenr" class="fa-regular fa-images" aria-label="bilde-ikon"> 6 </i>
+                <i id="fav" class="fa-regular fa-heart" aria-label="favoritt-ikon"></i>
+            </section>
+            <section>
+                <nav>
+                    <a href="#oversikt" class="current">Oversikt</a>
+                    <a href="#fasiliteter">Fasiliteter</a>
+                    <a href="#romvalg">Rom</a>
+                </nav>
+                <hr>
+            </section>
+        </header>
 
         <main></main>
 
