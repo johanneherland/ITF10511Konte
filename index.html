@@ -11,6 +11,53 @@
     <link rel="stylesheet" href="ikoner/css/brands.css"> <!-- Kobler til brands i FontAwesome -->
 </head>
 <body>
-    
+    <div id="indexContainer">
+
+        <!-- Global header med navigasjon, logo og linker -->
+        <!-- Oppgavetekst sider header skal bestå av to deler med brukerlinker i en del og logo + navigasjon i en annen, jeg får ikke til å sette opp layout til headeren med denne strukturen, og har derfor valgt å sette det opp som dette -->
+        <header class="globalHead">
+            <a href="index.html" class="logo"><img src="Bilder/logo.png" alt="logo som viser et fly over en sol"></a> <!-- Logo med link til hovedsiden -->
+            <a href="order.html" class="søk"><i class="fa-solid fa-magnifying-glass" aria-label="søke-ikon"></i></a><!-- søkeikon med link til order.html -->
+            <details class="bruker">
+                <summary><i class="fa-regular fa-circle-user" aria-label="bruker-ikon"></i></summary><!-- brukerikon som holder på linker til "opprett en konto" og "min side" -->
+                <a href="#">Opprett en konto</a>
+                <a href="#">
+                    <i class="fa-regular fa-circle-user" aria-label="bruker-ikon"></i>
+                    Min side
+                </a>
+            </details>
+            <details class="globalNav">
+                <summary aria-label="meny-ikon"><i class="fa-solid fa-bars"></i></summary>
+                <nav>
+                    <a href="index.html#tips">Tips og inspirasjon</a> <!-- Link til Tips og inspirasjon på forsiden -->
+                    <a href="hotell.html">Hotell</a> <!-- Link til hotell.html -->
+                    <a href="https://www.norwegian.no" target="_blank">Fly</a> <!-- Link til Norwegian som åpnes i ny fane -->
+                    <a href="#footer">Kontakt</a> <!-- Link til footer på den aktuelle siden -->
+                </nav>
+            </details>
+        </header>
+
+        <!-- Indexheader med banner og søkeskjema -->
+        <header>
+
+            <section class="banner"></section>
+            
+            <section class="søk"></section>
+
+        </header>
+
+        <main>
+
+            <section id="kampanje"></section>
+
+            <section id="tilbud"></section>
+            
+            <section id="tips"></section>
+
+        </main>
+
+        <footer></footer>
+
+    </div>
 </body>
 </html>
