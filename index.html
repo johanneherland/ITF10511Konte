@@ -38,11 +38,74 @@
         </header>
 
         <!-- Indexheader med banner og søkeskjema -->
-        <header>
+        <header id="indexHeader">
 
-            <section class="banner"></section>
-
-            <section class="søk"></section>
+            <section id="banner">
+                <img src="Bilder/strand1.jpg" alt="Bilde av blått vann som bølger inn mot en strand">
+            </section>
+            
+            <section class="søk">
+                <nav class="søkeNav"> <!-- Navigasjonsbar for søkekategori med tomme lenker siden jeg kun lager første skjema -->
+                    <a href="#" class="current">
+                        <i class="fa-solid fa-suitcase" aria-label="koffert-ikon"></i>
+                        Fly + Hotell
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-plane" aria-label="fly-ikon"></i>
+                        Fly
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-city" aria-label="by-ikon"></i>
+                        Storby
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-person-skiing" aria-label="ski-ikon"></i>
+                        Ski
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-map-location-dot" aria-label="kart-ikon"></i>
+                        Kombinasjonsreiser
+                    </a>
+                </nav>
+                <form> <!-- Søkeskjema -->
+                    <fieldset>
+                        <legend for="avreise" id="avreise">Fra</legend>
+                        <select name="avreise" id="avreise" required>
+                            <option value="OSL">Oslo Lufthavn</option>
+                            <option value="TRF">Sandefjord Lufthavn Torp</option>
+                            <option value="BGO">Bergen Lufthavn Flesland</option>
+                            <option value="ALF">Alta Lufthavn</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>    
+                        <legend for="destinasjon" id="destinasjon">Til</legend>
+                        <select name="destinasjon" id="destinasjon" required>
+                            <option value="ALB">Albania</option>
+                            <option value="DNK">Danmark</option>
+                            <option value="FIN">Finland</option>
+                            <option value="GRC">Hellas</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>
+                        <legend for="lengde" id="lengde">Reiselengde</legend>
+                        <select name="lengde" id="lengde" required>
+                            <option value="-1">Mindre enn 1 uke</option>
+                            <option value="1">1 uke</option>
+                            <option value="2">2 uker</option>
+                            <option value="2+">Mer enn 2 uker</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>
+                        <legend for="dato" id="dato">Velg dato</legend>
+                        <input name="dato" id="dato" type="date" min="2025-01-31" required>
+                    </fieldset>
+                    <fieldset>
+                        <legend for="antall" id="antall">Antall reisende</legend>
+                        <input name="antall" id="antall" type="number" min="1" required>
+                    </fieldset>
+                    <input class="btn" type="submit" value="Søk">
+                </form>
+            </section>
 
         </header>
 
