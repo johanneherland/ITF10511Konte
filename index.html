@@ -16,7 +16,9 @@
         <!-- Global header med navigasjon, logo og linker -->
         <!-- Oppgavetekst sider header skal bestå av to deler med brukerlinker i en del og logo + navigasjon i en annen, jeg får ikke til å sette opp layout til headeren med denne strukturen, og har derfor valgt å sette det opp som dette -->
         <header class="globalHead">
-            <a href="index.html" class="logo"><img src="Bilder/logo.png" alt="logo som viser et fly over en sol"></a> <!-- Logo med link til hovedsiden -->
+            <h1>
+                <a href="index.html" class="logo"><img src="Bilder/logo.png" alt="logo som viser et fly over en sol"></a> <!-- Logo med link til hovedsiden -->
+            </h1>
             <a href="order.html" class="søk"><i class="fa-solid fa-magnifying-glass" aria-label="søke-ikon"></i></a><!-- søkeikon med link til order.html -->
             <details class="bruker">
                 <summary><i class="fa-regular fa-circle-user" aria-label="bruker-ikon"></i></summary><!-- brukerikon som holder på linker til "opprett en konto" og "min side" -->
@@ -68,7 +70,11 @@
                     </a>
                 </nav>
                 <form> <!-- Søkeskjema -->
-                    <fieldset>
+                    <fieldset> 
+                        <!-- Bruker fieldset og legend her (i stedet for label) for å oppnå design som på bildene 
+                        "The <fieldset> tag draws a box around the related elements ... The <legend> tag is used to define a caption for the <fieldset> element" 
+                        (https://www.w3schools.com/tags/tag_fieldset.asp) -->
+                        <!-- Bruker select for å få dropdownliste -->
                         <legend for="avreise" id="avreise">Fra</legend>
                         <select name="avreise" id="avreise" required>
                             <option value="OSL">Oslo Lufthavn</option>
@@ -111,11 +117,74 @@
 
         <main>
 
-            <section id="kampanje"></section>
+            <section id="kampanje">
+                <img src="Bilder/basseng1.jpg" alt="Kvinne som lener seg på en bassengkant med utsikt til bungalows på vannet">
+                <article>
+                    <h2>Bestill sommerens beste uke</h2> 
+                    <p>Fly + hotell, 7 dager</p>
+                    <p class="pris">3298,-</p>
+                    <a class="btn" href="hotell.html">Bestill i dag</a>
+                </article>
+            </section>
 
-            <section id="tilbud"></section>
+            <section id="tilbud">
+                <article>
+                    <h3>Få ekslusive tilbud</h3> 
+                    <a href="#">Logg inn/opprett konto og få rabattkoder<i class="fa-solid fa-angles-right"></i></a>
+                </article>
+                <article>
+                    <h3>Billige restplasser</h3> 
+                    <a href="#">Opptil 50% rabatt<i class="fa-solid fa-angles-right"></i></a>
+                </article>
+                <article>
+                    <h3>Mars - spar opp til 5000,-</h3> 
+                    <a href="#">Sikre deg et feriekupp<i class="fa-solid fa-angles-right"></i></a>
+                </article>
+            </section>
             
-            <section id="tips"></section>
+            <section id="tips">
+                <h2>Tips og inspirasjon</h2>
+                <article>
+                    <img src="Bilder/strand2.jpg" alt="oversiktsbilde som viser en isolert strand bland åssider og blått vann">
+                    <h3>Greske favoritter</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet libero at ligula gravida consectetur. Suspendisse eget vulputate sem, vel finibus libero.</p> <!-- Kort ingress -->
+                    <a href="#">Fra kr 3970
+                        <i class="fa-solid fa-arrow-right" aria-label="les mer-ikon"></i>
+                    </a>
+                    <p class="tag">Ukens Deal</p>
+                </article>
+                <article>
+                    <img src="Bilder/strand3.jpg" alt="fem reisende i badetøy som løper fra stranden til havet">
+                    <h3>Solskinnspriser - bestill i dag!</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet libero at ligula gravida consectetur. Suspendisse eget vulputate sem, vel finibus libero.</p> <!-- Kort ingress -->
+                    <a href="#">Fra kr 3203 <i class="fa-solid fa-arrow-right" aria-label="les mer-ikon"></i></a>
+                </article>
+                <article>
+                    <img src="Bilder/barcelona.jpg" alt="utsikt over Barcelona med La Sagrada Família i senter">
+                    <h3>Storbyferie</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet libero at ligula gravida consectetur. Suspendisse eget vulputate sem, vel finibus libero.</p> <!-- Kort ingress -->
+                    <a href="#">Les mer <i class="fa-solid fa-arrow-right" aria-label="les mer-ikon"></i></a>
+                </article>
+                <article>
+                    <img src="Bilder/london.jpg" alt="sideperspektiv av Tower Bridge i London">
+                    <h3>Besøk påskefavoritten London</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet libero at ligula gravida consectetur. Suspendisse eget vulputate sem, vel finibus libero.</p> <!-- Kort ingress -->
+                    <a href="#">Fra kr 2150 <i class="fa-solid fa-arrow-right" aria-label="les mer-ikon"></i></a>
+                </article>
+                <article>
+                    <img src="Bilder/ski.jpg" alt="en person som står på ski i bakke og en skiheis med to gondoler i bakgrunnen">
+                    <h3>Skiferie</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet libero at ligula gravida consectetur. Suspendisse eget vulputate sem, vel finibus libero.</p> <!-- Kort ingress -->
+                    <a href="#">Se alle skistedene <i class="fa-solid fa-arrow-right" aria-label="les mer-ikon"></i></a>
+                    <p class="tag">Nyhet</p>
+                </article>
+                <article>
+                    <img src="Bilder/strand4.jpg" alt="brygge i tre som leder fra en hvit strand og grønne planter til runde cabanas omringet av blått vann">
+                    <h3>Spar opptil 7000,- i sommer</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet libero at ligula gravida consectetur. Suspendisse eget vulputate sem, vel finibus libero.</p> <!-- Kort ingress -->
+                    <a href="#">Les mer <i class="fa-solid fa-arrow-right" aria-label="les mer-ikon"></i></a>
+                </article>
+            </section>
 
         </main>
 
