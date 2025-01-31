@@ -19,9 +19,10 @@
         <header class="globalHead">
             <h1 class="logo">
                 <a href="index.html"><img src="Bilder/logo.png" alt="logo som viser et fly over en sol"></a> <!-- Logo med link til hovedsiden -->
-            </h1>            <a href="order.html" class="søk"><i class="fa-solid fa-magnifying-glass" aria-label="søke-ikon"></i></a><!-- søkeikon med link til order.html -->
+            </h1>
+            <a href="order.html" class="search"><i class="fa-solid fa-magnifying-glass" aria-label="søk"></i></a><!-- søkeikon med link til order.html -->
             <details class="bruker">
-                <summary><i class="fa-regular fa-circle-user" aria-label="bruker-ikon"></i></summary><!-- brukerikon som holder på linker til "opprett en konto" og "min side" -->
+                <summary><i class="fa-regular fa-circle-user" aria-label="bruker"></i></summary><!-- brukerikon som holder på linker til "opprett en konto" og "min side" -->
                 <a href="#">Opprett en konto</a>
                 <a href="#">
                     <i class="fa-regular fa-circle-user" aria-label="bruker-ikon"></i>
@@ -29,7 +30,7 @@
                 </a>
             </details>
             <details class="globalNav">
-                <summary aria-label="meny-ikon"><i class="fa-solid fa-bars"></i></summary>
+                <summary aria-label="navigasjon"><i class="fa-solid fa-bars"></i></summary>
                 <nav>
                     <a href="index.html#tips">Tips og inspirasjon</a> <!-- Link til Tips og inspirasjon på forsiden -->
                     <a href="hotell.html">Hotell</a> <!-- Link til hotell.html -->
@@ -42,7 +43,7 @@
         <main>
 
             <!--brødsmulemeny-->
-            <nav class="smulemeny">
+            <nav id="smulemeny">
                 <a href="index.html#orderForm">Søk</a>
                 <i class="fa-solid fa-angle-right"></i>
                 <a href="hotell.html">Søkeresultater</a>
@@ -61,31 +62,28 @@
             <details id="valg">
                 <summary>Dine valg <i class="fa-solid fa-angle-right"></i></summary>
                 <section id="hotellValg">
-                    <img src="Bilder/landscape-2016308_640.jpg" alt="utsikt over et basseng med hvite solstoler rundt og blå himmel i bakgrunnen">
+                    <img src="Bilder/basseng2.jpg" alt="utsikt over et basseng med hvite solstoler rundt og blå himmel i bakgrunnen">
                     <h2>Parga Beach</h2>
-                    <figure id="sol">
-                        <i class="fa-solid fa-sun"></i>
-                        <i class="fa-solid fa-sun"></i>
-                        <i class="fa-solid fa-sun"></i>
-                        <i class="fa-solid fa-sun"></i>
-                        <i class="fa-regular fa-sun"></i>
-                    </figure>
+                    <ul aria-label="fire av fem soler">
+                        <li><i class="fa-solid fa-sun"></i></li>
+                        <li><i class="fa-solid fa-sun"></i></li>
+                        <li><i class="fa-solid fa-sun"></i></li>
+                        <li><i class="fa-solid fa-sun"></i></li>
+                        <li><i class="fa-regular fa-sun" ></i></li>
+                    </ul>
                 </section>
                 <section id="oppsummering">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <p>Hellas, Parga</p>
-                    <i class="fa-regular fa-calendar"></i>
-                    <p>Man 5 mai - man 12 mai 2025</p>
-                    <i class="fa-regular fa-user"></i>
-                    <p>2 Voksne</p>
-                    <i class="fa-solid fa-bed"></i>
-                    <p>Deluxerom, Balkong og ikke spesifisert utsikt</p>
-                    <i class="fa-solid fa-utensils"></i>
-                    <p>Frokostbuffé</p>
-                    <i class="fa-solid fa-plane-departure"></i>
-                    <p>Oslo Lufthavn - Preveza</p>
-                    <del>22 003,-</del>
-                    <ins>19 803,-</ins>
+                    <h2 aria-label="Bestillingsoppsummering"></h2>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i>    Hellas, Parga</li>
+                        <li><i class="fa-regular fa-calendar"></i>  Man 5 mai - man 12 mai 2025</li>
+                        <li><i class="fa-regular fa-user"></i>  2 Voksne</li>
+                        <li><i class="fa-solid fa-bed"></i> Deluxerom, Balkong og ikke spesifisert utsikt</li>
+                        <li><i class="fa-solid fa-utensils"></i>    Frokostbuffé</li>
+                        <li><i class="fa-solid fa-plane-departure"></i> Oslo Lufthavn - Preveza</li>
+                        <li><del>22 003,-</del></li>
+                        <li><ins>19 803,-</ins></li>
+                    </ul>
                 </section>
             </details>
 
@@ -115,8 +113,9 @@
                         <input type="text" id="ponr" name="ponr" pattern="[0-9]{4}" required> <!-- bruker text heller enn number her for at pattern skal fungere -->
                         <label for="posted">Poststed:</label>
                         <input type="text" id="posted" name="posted" required>
-                        <label for="hjemland" id="hjemland">Fra</label>
+                        <label for="hjemland">Fra</label>
                         <select id="hjemland" name="hjemland" required>
+                            <option value="" disabled selected>Velg hjemland</option>
                             <option value="DNK">Danmark</option>
                             <option value="FIN">Finland</option>
                             <option value="NLD">Nederland</option>
@@ -138,10 +137,10 @@
                         <input type="radio" id="mann2" name="kjønn2" value="mann2">
                         <label for="mann2">mann</label>
                     </fieldset>
-                    <button class="btn">
-                        <input class="btn" type="submit" value="Siste trinn">
-                        <i class="fa-solid fa-arrow-right" aria-label="les mer-ikon"></i>
-                    </button> 
+                    <fieldset class="btn">
+                        <input type="submit" value="Siste trinn">
+                        <i class="fa-solid fa-arrow-right" aria-label="les mer"></i>
+                    </fieldset>
                 </form>
             </section>
 
@@ -150,6 +149,7 @@
         <footer>
 
             <section class="flagg"> <!-- Flagg og navn på de forskjellige landene flaggene representerer -->
+                <h2 aria-label="flagg"></h2>
                 <figure>
                     <img src="Flagg/sweden.png" alt="svensk flagg">
                     <figcaption>Sverige</figcaption>
@@ -176,35 +176,33 @@
                 <h3>BETALINGSMETODER</h3>
                 <ul>
                     <li>
-                        <i class="fa-brands fa-cc-visa" aria-label="Visa-ikon"></i> 
+                        <i class="fa-brands fa-cc-visa" aria-label="Visa"></i> 
                     </li>
                     <li>
-                        <i class="fa-brands fa-cc-mastercard" aria-label="MasterCard-ikon"></i> 
+                        <i class="fa-brands fa-cc-mastercard" aria-label="MasterCard"></i> 
                     </li>
                     <li>
-                        <i class="fa-brands fa-cc-paypal" aria-label="PayPal-ikon"></i> 
+                        <i class="fa-brands fa-cc-paypal" aria-label="PayPal"></i> 
                     </li>
                     <li>
-                        <i class="fa-brands fa-apple-pay" aria-label="Apple-pay-ikon"></i> 
+                        <i class="fa-brands fa-apple-pay" aria-label="Apple-pay"></i> 
                     </li>
                     <li>
-                        <i class="fa-brands fa-cc-amazon-pay" aria-label="Amazon-pay-ikon"></i> 
+                        <i class="fa-brands fa-cc-amazon-pay" aria-label="Amazon-pay"></i> 
                     </li>
                 </ul>
             </section>
 
             <section class="nyheterTilbud">
                 <h3>NYHETER & TILBUD</h3>
-                <section>
                     <form>
                         <fieldset>
-                            <legend for="email">Med deg på nyhetsbrev her</legend>
+                            <legend>Med deg på nyhetsbrev her</legend>
                             <input type="email" id="email" name="email" placeholder="epost@eksempel.com">
                             <!-- Valgte å bruke input type email, W3 Schools forklarer at "The input value is automatically validated to ensure it is a properly formatted e-mail address." -->
                             <input type="submit" value="Send" class="btn">
                         </fieldset>
                     </form>
-                </section>
                 <a href="#">Kjøp reisegavekort</a>
             </section>
 
@@ -231,31 +229,31 @@
                 <ul> 
                     <!-- Instagram-ikon med link som åpnes i ny fane -->
                     <li>
-                        <a href="instagram.com" target="_blank">
+                        <a href="https://www.instagram.com" target="_blank">
                             <i class="fa-brands fa-instagram" aria-label="Besøk vår Instagram"></i> 
                         </a>
                     </li>
                     <!-- Facebook-ikon med link som åpnes i ny fane -->
                     <li>
-                        <a href="facebook.com" target="_blank">
+                        <a href="https://www.facebook.com" target="_blank">
                             <i class="fa-brands fa-facebook-f" aria-label="Besøk vår Facebook"></i>
                         </a>
                     </li>
                     <!-- Pinterest-ikon med link som åpnes i ny fane -->
                     <li>
-                        <a href="pinterest.com" target="_blank">
+                        <a href="https://www.pinterest.com" target="_blank">
                             <i class="fa-brands fa-pinterest-p" aria-label="Besøk vår Pinterest"></i>
                         </a>
                     </li> 
                     <!-- TikTok-ikon med link som åpnes i ny fane -->
                     <li>
-                        <a href="tiktok.com" target="_blank">
+                        <a href="https://www.tiktok.com" target="_blank">
                             <i class="fa-brands fa-tiktok" aria-label="Besøk vår TikTok"></i>
                         </a>
                     </li> 
                     <!-- Youtube-ikon med link som åpnes i ny fane -->
                     <li>
-                        <a href="youtube.com" target="_blank">
+                        <a href="https://www.youtube.com" target="_blank">
                             <i class="fa-brands fa-youtube" aria-label="Besøk vår Youtube"></i>
                         </a>
                     </li> 

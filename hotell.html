@@ -19,9 +19,10 @@
         <header class="globalHead">
             <h1 class="logo">
                 <a href="index.html"><img src="Bilder/logo.png" alt="logo som viser et fly over en sol"></a> <!-- Logo med link til hovedsiden -->
-            </h1>            <a href="order.html" class="søk"><i class="fa-solid fa-magnifying-glass" aria-label="søke-ikon"></i></a><!-- søkeikon med link til order.html -->
+            </h1>
+            <a href="order.html" class="search"><i class="fa-solid fa-magnifying-glass" aria-label="søk"></i></a><!-- søkeikon med link til order.html -->
             <details class="bruker">
-                <summary><i class="fa-regular fa-circle-user" aria-label="bruker-ikon"></i></summary><!-- brukerikon som holder på linker til "opprett en konto" og "min side" -->
+                <summary><i class="fa-regular fa-circle-user" aria-label="bruker"></i></summary><!-- brukerikon som holder på linker til "opprett en konto" og "min side" -->
                 <a href="#">Opprett en konto</a>
                 <a href="#">
                     <i class="fa-regular fa-circle-user" aria-label="bruker-ikon"></i>
@@ -29,7 +30,7 @@
                 </a>
             </details>
             <details class="globalNav">
-                <summary aria-label="meny-ikon"><i class="fa-solid fa-bars"></i></summary>
+                <summary aria-label="navigasjon"><i class="fa-solid fa-bars"></i></summary>
                 <nav>
                     <a href="index.html#tips">Tips og inspirasjon</a> <!-- Link til Tips og inspirasjon på forsiden -->
                     <a href="hotell.html">Hotell</a> <!-- Link til hotell.html -->
@@ -40,21 +41,52 @@
         </header>
 
         <header id="hotellHeader">
-            <section class="galleri" aria-label="bildegalleri">
-                <img id="slide1" class="slide" src="Bilder/basseng2.jpg" alt="utsikt over et basseng med hvite solstoler rundt og blå himmel i bakgrunnen">
-                <img id="slide2" class="slide" src="Bilder/strand2.jpg" alt="oversiktsbilde som viser en isolert strand bland åssider og blått vann">
-                <img id="slide3" class="slide" src="Bilder/basseng1.jpg" alt="Kvinne som lener seg på en bassengkant med utsikt til bungalows på vannet">
-                <img id="slide4" class="slide" src="Bilder/strand3.jpg" alt="fem reisende i badetøy som løper fra stranden til havet">
-                <img id="slide5" class="slide" src="Bilder/strand1.jpg" alt="Bilde av blått vann som bølger inn mot en strand">
-                <img id="slide6" class="slide" src="Bilder/strand4.jpg" alt="brygge i tre som leder fra en hvit strand og grønne planter til runde cabanas omringet av blått vann">
+            <section id="galleri" aria-label="bildegalleri">
+                <figure id="slide1" class="slide">
+                    <img src="Bilder/basseng2.jpg" alt="utsikt over et basseng med hvite solstoler rundt og blå himmel i bakgrunnen">
+                    <a href="#slide6" class="forrige"><i class="fa-solid fa-angle-left" aria-label="forrige bilde"></i></a>
+                    <a href="#slide2" class="neste"><i class="fa-solid fa-angle-right" aria-label="neste bilde"></i></a>
+                    <p class="antall"><i class="fa-regular fa-images" aria-label="seks bilder i galleriet"></i> 1/6 </p>
+                    <a href="#" class="fav"><i class="fa-regular fa-heart" aria-label="favoritt"></i></a>
+                </figure>
+                <figure id="slide2" class="slide">
+                    <img src="Bilder/strand2.jpg" alt="oversiktsbilde som viser en isolert strand bland åssider og blått vann">
+                    <a class="forrige" href="#slide1"><i class="fa-solid fa-angle-left" aria-label="forrige bilde"></i></a>
+                    <a class="neste" href="#slide3"><i class="fa-solid fa-angle-right" aria-label="neste bilde"></i></a>
+                    <p class="antall"><i class="fa-regular fa-images" aria-label="seks bilder i galleriet"></i> 2/6 </p>
+                    <a href="#" class="fav"><i class="fa-regular fa-heart" aria-label="favoritt"></i></a>
+                </figure>
+                <figure id="slide3" class="slide">
+                    <img src="Bilder/basseng1.jpg" alt="Kvinne som lener seg på en bassengkant med utsikt til bungalows på vannet">
+                    <a class="forrige" href="#slide2"><i class="fa-solid fa-angle-left" aria-label="forrige bilde"></i></a>
+                    <a class="neste" href="#slide4"><i class="fa-solid fa-angle-right" aria-label="neste bilde"></i></a>
+                    <p class="antall"><i class="fa-regular fa-images" aria-label="seks bilder i galleriet"></i> 3/6 </p>
+                    <a href="#" class="fav"><i class="fa-regular fa-heart" aria-label="favoritt"></i></a>
+                </figure>
+                <figure id="slide4" class="slide">
+                    <img src="Bilder/strand3.jpg" alt="fem reisende i badetøy som løper fra stranden til havet">
+                    <a class="forrige" href="#slide3"><i class="fa-solid fa-angle-left" aria-label="forrige bilde"></i></a>
+                    <a class="neste" href="#slide5"><i class="fa-solid fa-angle-right" aria-label="neste bilde"></i></a>
+                    <p class="antall"><i class="fa-regular fa-images" aria-label="seks bilder i galleriet"></i> 4/6 </p>
+                    <a href="#" class="fav"><i class="fa-regular fa-heart" aria-label="favoritt"></i></a>
+                </figure>
+                <figure id="slide5" class="slide">
+                    <img src="Bilder/strand1.jpg" alt="Bilde av blått vann som bølger inn mot en strand">
+                    <a class="forrige" href="#slide4"><i class="fa-solid fa-angle-left" aria-label="forrige bilde"></i></a>
+                    <a class="neste" href="#slide6"><i class="fa-solid fa-angle-right" aria-label="neste bilde"></i></a>
+                    <p class="antall"><i class="fa-regular fa-images" aria-label="seks bilder i galleriet"></i> 5/6 </p>
+                    <a href="#" class="fav"><i class="fa-regular fa-heart" aria-label="favoritt"></i></a>
+                </figure>
+                <figure id="slide6" class="slide">
+                    <img src="Bilder/strand4.jpg" alt="brygge i tre som leder fra en hvit strand og grønne planter til runde cabanas omringet av blått vann">
+                    <a class="forrige" href="#slide5"><i class="fa-solid fa-angle-left" aria-label="forrige bilde"></i></a>
+                    <a class="neste" href="#slide1"><i class="fa-solid fa-angle-right" aria-label="neste bilde"></i></a>
+                    <p class="antall"><i class="fa-regular fa-images" aria-label="seks bilder i galleriet"></i> 6/6 </p>
+                    <a href="#" class="fav"><i class="fa-regular fa-heart" aria-label="favoritt"></i></a>
+                </figure>
             </section>
             <section>
-                <i id="forrige" class="fa-solid fa-angle-left" aria-label="forrige bilde"></i>
-                <i id="neste" class="fa-solid fa-angle-right" aria-label="neste bilde"></i>
-                <i id="antall" class="fa-regular fa-images" aria-label="bilde-ikon"> 6 </i>
-                <i id="fav" class="fa-regular fa-heart" aria-label="favoritt-ikon"></i>
-            </section>
-            <section>
+                <h2 aria-label="navigasjon"></h2>
                 <nav>
                     <a href="#oversikt" class="current">Oversikt</a>
                     <a href="#fasiliteter">Fasiliteter</a>
@@ -64,16 +96,16 @@
             </section>
         </header>
 
-        <main>
+        <main> 
 
             <section id="oversikt">
                 <h2>Parga Beach</h2>
-                <ul>
-                    <li><i class="fa-solid fa-sun" aria-label="fylt sol-ikon"></i></li>
-                    <li><i class="fa-solid fa-sun" aria-label="fylt sol-ikon"></i></li>
-                    <li><i class="fa-solid fa-sun" aria-label="fylt sol-ikon"></i></li>
-                    <li><i class="fa-solid fa-sun" aria-label="fylt sol-ikon"></i></li>
-                    <li><i class="fa-regular fa-sun" aria-label="tomt sol-ikon"></i></li>
+                <ul aria-label="fire av fem soler">
+                    <li><i class="fa-solid fa-sun"></i></li>
+                    <li><i class="fa-solid fa-sun"></i></li>
+                    <li><i class="fa-solid fa-sun"></i></li>
+                    <li><i class="fa-solid fa-sun"></i></li>
+                    <li><i class="fa-regular fa-sun" ></i></li>
                 </ul>
                 <p class="score">8.9</p>
                 <p class="review">Fantastisk</p>
@@ -84,12 +116,12 @@
                 <h2>Fasiliteter</h2>
                 <p id="ingress">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet libero at ligula gravida consectetur. Suspendisse eget vulputate sem, vel finibus libero.</p> <!-- Kort ingress -->
                 <ul>
-                    <li><i class="fa-solid fa-paw" aria-label="kjæledyr-ikon"></i> Kjæledyr-vennlig</li>
-                    <li><i class="fa-solid fa-mug-hot" aria-label="frokost-ikon"></i> Frokost</li>
-                    <li><i class="fa-solid fa-spa" aria-label="spa-ikon"></i> Spa</li>
-                    <li><i class="fa-solid fa-bell-concierge" aria-label="romservice-ikon"></i> Romservice</li>
-                    <li><i class="fa-solid fa-martini-glass" aria-label="drink-ikon"></i> Bar</li>
-                    <li><i class="fa-solid fa-dumbbell" aria-label="trening-ikon"></i> Treningssenter</li>
+                    <li id="fas1"><i class="fa-solid fa-paw"></i> Kjæledyr-vennlig</li>
+                    <li id="fas2"><i class="fa-solid fa-mug-hot"></i> Frokost</li>
+                    <li id="fas3"><i class="fa-solid fa-spa"></i> Spa</li>
+                    <li id="fas4"><i class="fa-solid fa-bell-concierge"></i> Romservice</li>
+                    <li id="fas5"><i class="fa-solid fa-martini-glass"></i> Bar</li>
+                    <li id="fas6"><i class="fa-solid fa-dumbbell"></i> Treningssenter</li>
                 </ul>
                 <a href="#">Se alle eiendomsfasiliteter<i class="fa-solid fa-angles-right"></i></a>
             </section>
@@ -102,7 +134,7 @@
             <section id="romvalg">
                 <h2>Velg rom</h2>
                 <article id="rom1">
-                    <img src="Bilder/beach-6514331_640.jpg" alt="oversiktsbilde som viser en isolert strand bland åssider og blått vann">
+                    <img src="Bilder/strand2.jpg" alt="oversiktsbilde som viser en isolert strand bland åssider og blått vann">
                     <h3>Junior Suite</h3>
                     <ul class="romInfo">
                         <li>Plass til 2</li>
@@ -118,7 +150,7 @@
                     </ul>
                 </article>
                 <article id="rom2">
-                    <img src="Bilder/beach-6514331_640.jpg" alt="oversiktsbilde som viser en isolert strand bland åssider og blått vann">
+                    <img src="Bilder/strand2.jpg" alt="oversiktsbilde som viser en isolert strand bland åssider og blått vann">
                     <h3>Junior Suite</h3>
                     <ul class="romInfo">
                         <li>Plass til 2</li>
@@ -134,7 +166,7 @@
                     </ul>
                 </article>
                 <article id="rom3">
-                    <img src="Bilder/beach-6514331_640.jpg" alt="oversiktsbilde som viser en isolert strand bland åssider og blått vann">
+                    <img src="Bilder/strand2.jpg" alt="oversiktsbilde som viser en isolert strand bland åssider og blått vann">
                     <h3>Junior Suite</h3>
                     <ul class="romInfo">
                         <li>Plass til 2</li>
@@ -150,7 +182,7 @@
                     </ul>
                 </article>
                 <article id="rom4">
-                    <img src="Bilder/beach-6514331_640.jpg" alt="oversiktsbilde som viser en isolert strand bland åssider og blått vann">
+                    <img src="Bilder/strand2.jpg" alt="oversiktsbilde som viser en isolert strand bland åssider og blått vann">
                     <h3>Junior Suite</h3>
                     <ul class="romInfo">
                         <li>Plass til 2</li>
@@ -177,6 +209,7 @@
         <footer>
 
             <section class="flagg"> <!-- Flagg og navn på de forskjellige landene flaggene representerer -->
+                <h2 aria-label="flagg"></h2>
                 <figure>
                     <img src="Flagg/sweden.png" alt="svensk flagg">
                     <figcaption>Sverige</figcaption>
@@ -203,35 +236,33 @@
                 <h3>BETALINGSMETODER</h3>
                 <ul>
                     <li>
-                        <i class="fa-brands fa-cc-visa" aria-label="Visa-ikon"></i> 
+                        <i class="fa-brands fa-cc-visa" aria-label="Visa"></i> 
                     </li>
                     <li>
-                        <i class="fa-brands fa-cc-mastercard" aria-label="MasterCard-ikon"></i> 
+                        <i class="fa-brands fa-cc-mastercard" aria-label="MasterCard"></i> 
                     </li>
                     <li>
-                        <i class="fa-brands fa-cc-paypal" aria-label="PayPal-ikon"></i> 
+                        <i class="fa-brands fa-cc-paypal" aria-label="PayPal"></i> 
                     </li>
                     <li>
-                        <i class="fa-brands fa-apple-pay" aria-label="Apple-pay-ikon"></i> 
+                        <i class="fa-brands fa-apple-pay" aria-label="Apple-pay"></i> 
                     </li>
                     <li>
-                        <i class="fa-brands fa-cc-amazon-pay" aria-label="Amazon-pay-ikon"></i> 
+                        <i class="fa-brands fa-cc-amazon-pay" aria-label="Amazon-pay"></i> 
                     </li>
                 </ul>
             </section>
 
             <section class="nyheterTilbud">
                 <h3>NYHETER & TILBUD</h3>
-                <section>
                     <form>
                         <fieldset>
-                            <legend for="email">Med deg på nyhetsbrev her</legend>
+                            <legend>Med deg på nyhetsbrev her</legend>
                             <input type="email" id="email" name="email" placeholder="epost@eksempel.com">
                             <!-- Valgte å bruke input type email, W3 Schools forklarer at "The input value is automatically validated to ensure it is a properly formatted e-mail address." -->
                             <input type="submit" value="Send" class="btn">
                         </fieldset>
                     </form>
-                </section>
                 <a href="#">Kjøp reisegavekort</a>
             </section>
 
@@ -258,31 +289,31 @@
                 <ul> 
                     <!-- Instagram-ikon med link som åpnes i ny fane -->
                     <li>
-                        <a href="instagram.com" target="_blank">
+                        <a href="https://www.instagram.com" target="_blank">
                             <i class="fa-brands fa-instagram" aria-label="Besøk vår Instagram"></i> 
                         </a>
                     </li>
                     <!-- Facebook-ikon med link som åpnes i ny fane -->
                     <li>
-                        <a href="facebook.com" target="_blank">
+                        <a href="https://www.facebook.com" target="_blank">
                             <i class="fa-brands fa-facebook-f" aria-label="Besøk vår Facebook"></i>
                         </a>
                     </li>
                     <!-- Pinterest-ikon med link som åpnes i ny fane -->
                     <li>
-                        <a href="pinterest.com" target="_blank">
+                        <a href="https://www.pinterest.com" target="_blank">
                             <i class="fa-brands fa-pinterest-p" aria-label="Besøk vår Pinterest"></i>
                         </a>
                     </li> 
                     <!-- TikTok-ikon med link som åpnes i ny fane -->
                     <li>
-                        <a href="tiktok.com" target="_blank">
+                        <a href="https://www.tiktok.com" target="_blank">
                             <i class="fa-brands fa-tiktok" aria-label="Besøk vår TikTok"></i>
                         </a>
                     </li> 
                     <!-- Youtube-ikon med link som åpnes i ny fane -->
                     <li>
-                        <a href="youtube.com" target="_blank">
+                        <a href="https://www.youtube.com" target="_blank">
                             <i class="fa-brands fa-youtube" aria-label="Besøk vår Youtube"></i>
                         </a>
                     </li> 

@@ -2,3 +2,19 @@
 
 // Definerer Montserrat som en SCSS-variabel for hovedfonten
 $mainFont: "Montserrat", sans-serif;
+
+html {
+    font-size: calc(1em + 1vw); 
+}
+
+body {
+    font-family: $mainFont;
+}
+
+.pris, .review, .score, .btn, .tag, ins, legend, label, .current {
+    font-weight: bold;
+}
+
+label {
+    font-size: small;
+}

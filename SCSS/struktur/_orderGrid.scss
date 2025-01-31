@@ -1,0 +1,52 @@
+@import 'grid';
+
+#orderContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+
+    .globalHead{
+        @include grid-placment("1/2", "1/2");
+    }
+
+    main {
+        @include grid-placment("1/2", "2/3");
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        #smulemeny {
+            @include grid-placment("1/2", "1/2");
+            display: flex;
+            overflow-x: scroll;
+            padding: 1rem 2rem;
+            gap: 1rem;
+        }
+        #valg {
+            @include grid-placment("1/2", "2/3");
+            #hotellValg {
+                ul li {
+                    display: inline-block;
+                }
+            }
+            #oppsummering {
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    li {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        #bestilling {
+            @include grid-placment("1/2", "3/4");
+            form {
+                fieldset {
+                }
+            }
+        }
+    }
+    
+    footer {
+        @include grid-placment("1/2", "3/4");
+    }
+}

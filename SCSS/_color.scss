@@ -7,6 +7,87 @@ $meny: #027792;
 $footer: #252525;
 $score: #019101;
 $grå: #e8e8e8;
-$hvit: #f6f5f2;
+$lys: #f6f5f2;
 $svart: #000000;
+$hvit: #ffffff;
+$fav: #ff0000;
 
+.globalHead {
+    .bruker a {
+        color: $meny;
+    }
+}
+
+#soek {
+    background-color: $hvit;
+    nav {
+        a {
+            color: $svart;
+        }
+        .current {
+            color: $merk;
+        }
+    }
+}
+
+#kampanje {
+    article {
+        background-color: $kampanje;
+    }
+}
+
+#tilbud {
+    a {
+        color: $merk;
+    }
+}
+
+.tag {
+    background-color: $merk;
+    color: $hvit;
+}
+
+.score {
+    color: $hvit;
+    background-color: $score;
+}
+
+.btn {
+    background-color: $knapp;
+    color: $svart;
+}
+
+.forrige, .neste, .antall {
+    background-color: $svart;
+    opacity: 50%;
+    color: $hvit;
+}
+
+.fav {
+    background-color: white;
+    color: red;
+}
+
+#smulemeny {
+    background-color: $merk;
+    * {
+        color: $hvit;
+    }
+}
+
+#oversikt, #hotellValg {
+    li {
+        color: $knapp;
+    }
+}
+
+ins {
+    color: $fav;
+}
+
+footer {
+    background-color: $footer;
+    * {
+        color: $hvit;
+    }
+}

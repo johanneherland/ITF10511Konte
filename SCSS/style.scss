@@ -1,14 +1,11 @@
 @import 'color';
 @import 'fonts';
+@import 'size';
+@import 'struktur/grid', 'struktur/indexGrid', 'struktur/hotellGrid', 'struktur/orderGrid', 'struktur/mediaGrid';
+@import 'layout/mediaFlex';
+@import 'styling';
 
-* {
-    box-sizing: border-box;
-}
 
-html {
-    font-size: calc(1em + 1vw); 
-}
 
-body {
-    font-family: $mainFont;
-}
+
+

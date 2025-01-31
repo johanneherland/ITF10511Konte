@@ -1,0 +1,36 @@
+// Definerer variabler for størrelser
+
+* {
+    box-sizing: border-box;
+}
+
+$maksbredde: 1400px;
+$hovedinnhold: 1000px;
+
+header, footer {
+    * {
+        max-width: $maksbredde;
+    }
+}
+
+main {
+    * {
+        max-width: $hovedinnhold;
+    }
+}
+
+#soek {
+    max-width: $hovedinnhold;
+}
+
+#kampanje {
+    img {
+        max-width: $hovedinnhold;
+        width: 1400px;
+        margin: 0;
+    }
+    article {
+        width: 75%;
+        height: 50%;
+    }
+}

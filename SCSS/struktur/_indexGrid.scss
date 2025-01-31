@@ -1,0 +1,152 @@
+@import 'grid';
+
+#indexContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+
+    .globalHead{
+        @include grid-placment("1/2", "1/2");
+    }
+
+    #indexHeader {
+        @include grid-placment("1/2", "2/3");
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        #banner {
+            @include grid-placment("1/2", "1/3");
+            position: relative;
+        }
+        #soek {
+            @include grid-placment("1/2", "3/5");
+            max-width: $hovedinnhold;
+            width: 100%;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(6, auto);
+            * {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            nav {
+                display: grid;
+                @include grid-placment("1/3", "1/2");
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                overflow-x: scroll;
+                padding: 1em;
+                a {
+                    display: inline-block;
+                }
+            }
+            form {
+                #avreise {
+                    @include grid-placment("1/3", "2/3");
+                }
+                #destinasjon {
+                    @include grid-placment("1/3", "3/4");
+                }
+                #lengde {
+                    @include grid-placment("1/2", "4/5");
+                }
+                #dato {
+                    @include grid-placment("2/3", "4/5");
+                }
+                #antall {
+                    @include grid-placment("1/3", "5/6");
+                }
+                .btn {
+                    @include grid-placment("1/3", "6/7");
+                }
+            }
+        }
+    }
+
+    main {
+        @include grid-placment("1/2", "3/4");
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3, auto);
+        #kampanje {
+            @include grid-placment("1/2", "1/2");
+            position: relative;
+            article {
+                width: 75%;
+                height: 50%;
+                position: absolute;
+                top: 10%;
+                left: 25%;
+                overflow: visible;
+                a {
+                    position: absolute;
+                    bottom: -100px;
+                    right: 0;
+                }
+            }
+        }
+        #tilbud {
+            @include grid-placment("1/2", "2/3");
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            overflow-x: scroll;
+            gap: 1rem;
+        }
+        #tips {
+            @include grid-placment("1/2", "3/4");
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto repeat(6, 1fr);
+            h2 {
+                @include grid-placment("1/2", "1/2");
+            }
+            #tip1 {
+                @include grid-placment("1/2", "2/3");
+                position: relative;
+                .tag {
+                    position: absolute;
+                    margin: 0;
+                    padding: 10px;
+                    top: 0px;
+                    left: 0px;
+                    z-index: 99;
+                }
+            }
+            #tip2 {
+                @include grid-placment("1/2", "3/4");
+            }
+            #tip3 {
+                @include grid-placment("1/2", "4/5");
+            }
+            #tip4 {
+                @include grid-placment("1/2", "5/6");
+            }
+            #tip5 {
+                @include grid-placment("1/2", "6/7");
+                position: relative;
+                .tag {
+                    position: absolute;
+                    margin: 0;
+                    padding: 10px;
+                    top: 0;
+                    left: 0;
+                    z-index: 99;
+                }
+            }
+            #tip6 {
+                @include grid-placment("1/2", "7/8");
+            }
+        }
+    }
+    
+    footer {
+        @include grid-placment("1/2","4/5" );
+    }
+}

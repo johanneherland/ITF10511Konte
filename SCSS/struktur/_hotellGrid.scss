@@ -1,0 +1,151 @@
+@import 'grid';
+
+#hotellContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+
+    .globalHead{
+        @include grid-placment("1/2", "1/2");
+    }
+
+    // https://www.w3schools.com/cssref/css_pr_scroll-snap-type.php
+    #hotellHeader {
+        @include grid-placment("1/2", "2/3");
+        #galleri {
+            max-width: $hovedinnhold;
+            overflow: hidden;
+            display: flex;
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+        }
+        .slide {
+            position: relative;
+            img {
+                width: $hovedinnhold;
+                height: 800px;
+                overflow: hidden;
+            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            scroll-snap-align: center;
+        }
+        //https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_text
+        .forrige {
+            position: absolute;
+            bottom: 50%;
+            left: 10px;
+            z-index: 99;
+        }
+        .neste {
+            position: absolute;
+            bottom: 50%;
+            right: 10px;
+            z-index: 99;
+        }
+        .antall {
+            position: absolute;
+            bottom: 0px;
+            right: 10px;
+            z-index: 99;
+        }
+        .fav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 99;
+        }
+    }
+
+    main {
+        @include grid-placment("1/2","3/4");
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        #oversikt {
+            @include grid-placment("1/2", "1/2");
+        }
+        #fasiliteter {
+            @include grid-placment("1/2", "2/3");
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(6, auto);
+            h2 {
+                @include grid-placment("1/3", "1/2");
+            }
+            #ingress {
+                @include grid-placment("1/3", "2/3");
+            }
+            ul li {
+                #fas1 {
+                    @include grid-placment("1/2", "3/4");
+                }
+                #fas2 {
+                    @include grid-placment("1/2", "4/5");
+                }
+                #fas3 {
+                    @include grid-placment("1/2", "5/6");
+                }
+                #fas4 {
+                    @include grid-placment("2/3", "3/4");
+                }
+                #fas5 {
+                    @include grid-placment("2/3", "4/5");
+                }
+                #fas6 {
+                    @include grid-placment("2/3", "5/6");
+                }
+            }
+            a {
+                @include grid-placment("1/3", "6/7");
+            }
+        }
+        #kart {
+            @include grid-placment("1/2", "3/4");
+        }
+        #romvalg {
+            @include grid-placment("1/2", "4/5");
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, auto);
+            h2 {
+                @include grid-placment("1/3", "1/2");
+            }
+            article {
+                #rom1 {
+                    @include grid-placment("1/2", "2/3");
+                }
+                #rom2 {
+                    @include grid-placment("1/2", "3/4");
+                }
+                #rom3 {
+                    @include grid-placment("2/3", "2/3");
+                }
+                #rom4 {
+                    @include grid-placment("2/3", "3/4");
+                }
+            }
+        }
+        #sticker {
+            @include grid-placment("1/2", "5/6");
+            position: sticky;
+            bottom: 0;
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: auto;
+            p {
+                @include grid-placment("1/2", "1/2");
+            }
+            #velgRom {
+                @include grid-placment("2/3", "1/2");
+            }
+        }
+    }
+    
+    footer {
+        @include grid-placment("1/2","4/5");
+    }
+}
