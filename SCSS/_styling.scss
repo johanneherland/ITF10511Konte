@@ -21,12 +21,6 @@
     align-items: center;
 }
 
-#tilbud article {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-}
-
 a, ins {
     text-decoration: none;
 }
@@ -35,13 +29,20 @@ ul, summary {
     list-style: none;
 }
 
-li {
-    display: inline-block;
+#oversikt {
+    ul li {
+        display: inline-block;
+    }
 }
 
 article {
     border-radius: 15px;
+    width: 100%;
     overflow: hidden;
+    box-shadow: 5px 5px 10px $grå;
+    p {
+        display: inline-block;
+    }
 }
 
 input, select {
@@ -67,4 +68,21 @@ input, select {
     justify-content: center;
     align-items: center;
     padding: 10px;
+}
+
+#sticker {
+    border-radius: 15px 15px 0 0;
+    box-shadow: 5px 5px 10px $grå;
+    padding: 10px;
+    #velgRom {
+        width: fit-content;
+        height: auto;
+        padding: 10px;
+        border: none;
+        border-radius: 15px;
+    }
+}
+
+.tag {
+    border-radius: 0 0 15px;
 }

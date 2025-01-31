@@ -101,8 +101,9 @@
         }
         #tips {
             @include grid-placment("1/2", "3/4");
+            width: 100%;
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: auto;
             grid-template-rows: auto repeat(6, 1fr);
             h2 {
                 @include grid-placment("1/2", "1/2");

@@ -81,6 +81,14 @@ $fav: #ff0000;
     }
 }
 
+#sticker {
+    background-color: $hvit;
+    button {
+        background-color: $merk;
+        color: $hvit;
+    }
+}
+
 ins {
     color: $fav;
 }
